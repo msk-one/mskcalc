@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta charset="utf-8" />
+
+    <title>TipApp</title>
+
+    <!-- TipApp references -->
+    <link rel="stylesheet" href="css/jquery-mobile.css">
+    <link href="css/index.css" rel="stylesheet" />
+</head>
+<body>
+    <div data-role="page" id="mainPage" data-add-back-btn="false">
+        <div data-role="header">
+            <h1>MskCalc</h1>
+            <a href="#settingsPage" id="settingsButton" class="ui-btn-right" data-role=" button" data-icon="gear">Settings</a>
+        </div>
+
+        <div data-role="content">
+            <form>
+                <div data-role="fieldcontain">
+                    <label for="expr">Enter expression:</label>
+                    <input type="text" name="expr" id="expr" data-clear-btn="true" maxlength="16" value="" placeholder="Enter expression here">
+                </div>
+                <p style="text-align: center;">
+                    <a href="#" id="evExpr" data-role="button" data-icon="check">Evaluate</a>
+                </p>
+                <p class="error">
+                    <label id="lablelerr"></label>
+                    <span id="errmsg"></span>
+                </p>
+                <p class="result">
+                    <label>Result:</label>
+                    <span id="resultExpr" class="resultExprNA">N/A</span>
+                </p>
+            </form>
+
+        </div>
+    </div>
+
+    <div data-role="page" id="settingsPage" data-add-back-btn="true">
+        <div data-role="header">
+            <a href="#mainPage" class="ui-btn ui-icon-delete ui-btn-icon-left"
+               data-rel="back">Back</a>
+            <h1>MskCalc settings</h1>
+        </div>
+        <div data-role="content">
+
+        </div>
+    </div>
+
+
+    <!-- Cordova reference, this is added to your app when it's built. -->
+    <script src="cordova.js"></script>
+    <script src="scripts/jquery.js"></script>
+    <script src="scripts/jquery-mobile.js"></script>
+    <script src="scripts/platformOverrides.js"></script>
+
+    <script src="scripts/index.js"></script>
+    <script src="scripts/app.js"></script>
+</body>
+</html>
